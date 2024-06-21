@@ -3,10 +3,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
-const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
-const ImageminMozjpeg = require('imagemin-mozjpeg');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageminWebpackPlugin = require("imagemin-webpack-plugin").default;
+const ImageminMozjpeg = require("imagemin-mozjpeg");
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
@@ -21,11 +22,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -51,7 +48,7 @@ module.exports = {
       ],
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: "[name].[contenthash].css",
     }),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: "./sw.bundle.js",
@@ -92,13 +89,13 @@ module.exports = {
   },
   optimization: {
     splitChunks: {
-      chunks: 'all',
+      chunks: "all",
       minSize: 20000,
       maxSize: 70000,
       minChunks: 1,
       maxAsyncRequests: 30,
       maxInitialRequests: 30,
-      automaticNameDelimiter: '~',
+      automaticNameDelimiter: "~",
       enforceSizeThreshold: 50000,
       cacheGroups: {
         defaultVendors: {

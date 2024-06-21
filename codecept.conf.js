@@ -1,4 +1,4 @@
-const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
+const { setHeadlessWhen, setCommonPlugins } = require("@codeceptjs/configure");
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
@@ -8,17 +8,17 @@ setCommonPlugins();
 
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: 'e2e/**/*.test.js',
-  output: 'e2e/output',
+  tests: "e2e/**/*.test.js",
+  output: "e2e/output",
   helpers: {
     Playwright: {
-      browser: 'chromium',
-      url: ' http://localhost:8091',
-      show: true
-    }
+      browser: "chromium",
+      url: " http://localhost:8091",
+      show: true,
+    },
   },
   include: {
-    I: './steps_file.js'
+    I: "./steps_file.js",
   },
-  name: 'Restaurant-Apps-2.1'
-}
+  name: "Restaurant-Apps-2.1",
+};

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover the best restaurants near you! Get expert recommendations and reviews on our website. Find your next favorite dining spot today!"
+    />
+
+    <link rel="icon" href="favicon.png" sizes="96x96" />
+    <link rel="manifest" href="./app.webmanifest" />
+    <link
+      rel="preload"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+    </noscript>
+    <link rel="preload" as="image" href="dist/images/hero-image_1-large.jpg" />
+    <title>Warung Wisata Kuliner</title>
+  </head>
+  <body>
+    <header class="app-bar" role="banner" aria-label="Main Navigation">
+      <div class="app-bar__brand">
+        <a href="/#/home">
+          <img src="images/resto.png" alt="App Logo" class="app-bar__logo" />
+        </a>
+        <span class="app-bar__name">Warung Wisata Kuliner</span>
+      </div>
+      <nav class="app-bar__nav" aria-label="Primary Navigation">
+        <ul class="app-bar__nav-list">
+          <li><a href="#/home" aria-label="Go to Home">Home</a></li>
+          <li>
+            <a href="#/favorites" aria-label="Go to Favorites">Favorite</a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com/chandrabintangg"
+              rel="noreferrer"
+              aria-label="Learn more About Us"
+              >About Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <button
+        id="menu-button"
+        class="app-bar__menu-button"
+        aria-label="Open navigation menu"
+      >
+        ☰
+      </button>
+    </header>
+
+    <div id="drawer" class="drawer" aria-hidden="true">
+      <nav aria-label="Drawer Navigation" id="navigationDrawer">
+        <ul class="drawer__list">
+          <li><a href="#/home" aria-label="Go to Home">Home</a></li>
+          <li>
+            <a href="#/favorites" aria-label="Go to Favorites">Favorite</a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com/chandrabintangg"
+              aria-label="Learn more About Us"
+              >About Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main id="main-content" tabindex="0"></main>
+
+    <footer class="footer" role="contentinfo" aria-label="Footer">
+      <p>&copy; 2024 - Warung Wisata Kuliner</p>
+    </footer>
+  </body>
+</html>
