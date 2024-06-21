@@ -35,7 +35,10 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static",
+      openAnalyzer: false,
+    }),
     new HtmlWebpackPlugin({
       template: "./src/templates/index.html",
     }),
